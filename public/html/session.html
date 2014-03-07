@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="devHeureApp"> <!-- ="devHeureApp"> -->
+	<head>
+		<title>Dévelop'Heure Session</title>
+		<meta charset="UTF-8">
+		<meta name=description content="This page display all the dev'heure sessions available">
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link href="/css/bootstrap/bootstrap.css" rel="stylesheet" media="screen">
+		<link href="/css/bootstrap/bootstrap-theme.css" rel="stylesheet" media="screen">
+		<!-- My CSS Code -->
+		<link href="/css/app.css" rel="stylesheet" media="screen">
+	</head>
+	<body>
+
+		<div class="table-responsive" ng-controller="SessionListCtrl"> <!-- ng-controller="SessionListCtrl"> -->
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th>index</th>
+						<th>date</th>
+						<th>name</th>
+						<th>title</th>
+						<th>speaker</th>
+						<th>video</th>
+						<th>survey</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="session in sessions">
+						<td>{{session.index}}</td>
+						<td>{{session.date}}</td>
+						<td>{{session.name}}</td>
+						<td>{{session.title}}</td>
+						<td>{{session.speaker}}</td>
+						<td>{{session.video}}</td>
+						<td>{{session.survey}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<hr/>
+
+		<h1 class="text-center">Hello World</h1>
+
+		<!-- Test jQuery -->
+		<div>
+			<h3>JQuery</h3>
+			<p id="jquery_test">Click on me to test JQuery: <span>JQuery is dead !!!</span></p>			
+		</div>
+
+		<!-- Test Angular -->
+		<div>
+			<h3>Angular</h3>
+			<p>If result is 3 then Angular is alive. 2 + 1 = <span>{{2+1}}</span></p>			
+		</div>
+
+		<hr/>
+		<!-- jQuery -->
+		<script src="/js/lib/jquery/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="/js/lib/bootstrap/bootstrap.js"></script>
+		<!-- Angular -->
+		<script src="/js/lib/angular/angular.js"></script>		
+		<script src="/js/lib/angular/angular-cookies.js"></script>
+		<script src="/js/lib/angular/angular-route.js"></script>
+
+		<script src="/js/lib/angular/angular-loader.js"></script>
+		<script src="/js/lib/angular/angular-resource.js"></script>
+		<script src="/js/lib/angular/angular-sanitize.js"></script>
+		<!-- My Javascript Code [Angular] -->
+		<script src="/js/app.js"></script>
+		<script src="/js/controllers.js"></script>
+		<script src="/js/directives.js"></script>
+		<script src="/js/filter.js"></script>
+		<script src="/js/services.js"></script>
+		<!-- My Javascript Code [jQuery] -->
+		<script src="/js/myJQuery.js"></script>
+	</body>
+</html>

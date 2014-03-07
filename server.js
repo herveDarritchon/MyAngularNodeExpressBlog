@@ -35,7 +35,7 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/', routes.index);
+app.get('/jade', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API

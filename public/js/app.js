@@ -1,31 +1,25 @@
 'use strict';
 
-// Declare app level module which depends on filters, and services
-angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
-  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+/* App Module */
+
+var devHeureApp = angular.module('devHeureApp', [
+  'ngRoute',
+  'devHeureControllers',
+  'services'
+  ]);
+
+/*devHeureApp.config(['$routeProvider',
+  function($routeProvider) {
     $routeProvider.
-      when('/', {
-        templateUrl: 'partials/index',
-        controller: IndexCtrl
+      when('/sessions', {
+        templateUrl: 'partials/session-list.html',
+        controller: 'SessionListCtrl'
       }).
-      when('/addPost', {
-        templateUrl: 'partials/addPost',
-        controller: AddPostCtrl
-      }).
-      when('/readPost/:id', {
-        templateUrl: 'partials/readPost',
-        controller: ReadPostCtrl
-      }).
-      when('/editPost/:id', {
-        templateUrl: 'partials/editPost',
-        controller: EditPostCtrl
-      }).
-      when('/deletePost/:id', {
-        templateUrl: 'partials/deletePost',
-        controller: DeletePostCtrl
+      when('/session/:sessionId', {
+        templateUrl: 'partials/session-detail.html',
+        controller: 'SessionDetailCtrl'
       }).
       otherwise({
-        redirectTo: '/'
+        redirectTo: '/jade'
       });
-    $locationProvider.html5Mode(true);
-  }]);
+  }]);*/
